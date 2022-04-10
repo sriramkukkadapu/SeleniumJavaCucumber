@@ -11,6 +11,21 @@ import io.cucumber.java.en.When;
 
 public class stepDefinitions {
 	
+	@Given("^Validate the browser$")
+    public void validate_the_browser() throws Throwable {
+		System.out.println("browser validated");
+    }
+
+    @When("^browser is triggered$")
+    public void browser_is_triggered() throws Throwable {
+    	System.out.println("browser triggered");
+    }
+
+    @Then("^check if browser is started$")
+    public void check_if_browser_is_started() throws Throwable {
+    	System.out.println("browser started");
+    }
+    
 	@Given("^user is on landing page$")
     public void user_is_on_landing_page() throws Throwable {
         System.out.println("User on landing page");

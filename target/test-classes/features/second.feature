@@ -1,18 +1,25 @@
 Feature: Application login
 
+Background: 
+Given Validate the browser
+When browser is triggered
+Then check if browser is started
+
+@RegTest @SmokeTest
 Scenario: Home page default login
 Given user is on landing page
 When user log in to application with "jin" and "1234"
 Then Home page is populated
 And Cards displayed are "true" 
  
- 
+@SmokeTest 
 Scenario: Home page default login
 Given user is on landing page
 When user log in to application with "john" and "abcd1234"
 Then Home page is populated
 And Cards displayed are "false"
 
+@MobileTest
 Scenario: Home page default login
 Given user is on landing page
 When user sign up with following details
@@ -20,7 +27,7 @@ When user sign up with following details
 Then Home page is populated
 And Cards displayed are "false"
 
-
+@RegTest
 Scenario Outline: Home page default login
 Given user is on landing page
 When user log in to application with multiple <username> and <password>

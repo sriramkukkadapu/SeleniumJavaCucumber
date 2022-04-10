@@ -7,12 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-			features = "src/test/java/features/second.feature",
+			features = "src/test/java/features/searchProduct.feature",
 			glue = "stepDefinitions",
-			stepNotifications = true
+			stepNotifications = true,
+			monochrome = true
 			
 		)
 
-public class TestRunner {
+public class TestRunnerFramework {
 
 }
