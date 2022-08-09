@@ -21,6 +21,7 @@ public class DBS_StepDefinitions {
 		System.out.println("=========> starting browser");
 	    WebDriverManager.chromedriver().setup();
 	    driver = new ChromeDriver();
+	    driver.manage().window().maximize();
     }
 	
 	@Given("Navigate to {string}")
